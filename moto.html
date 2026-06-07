@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartReach | Marketing Wizualny</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #ff8c00;
+            --bg: #050505;
+            --surface: #151515;
+            --text: #ffffff;
+        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        header { 
+            padding: 20px 8%; 
+            background: #000; 
+            border-bottom: 1px solid #333; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .back-btn { 
+            color: var(--text); 
+            text-decoration: none; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            border: 1px solid #333; 
+            padding: 10px 20px; 
+            transition: 0.3s; 
+        }
+        .back-btn:hover { background-color: var(--accent); color: #000; border-color: var(--accent); }
+        
+        .hero { padding: 100px 10%; text-align: center; }
+        h1 { font-weight: 900; font-size: 4rem; text-transform: uppercase; margin-bottom: 30px; }
+        .highlight { color: var(--accent); }
+        
+        .benefits { padding: 80px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .benefit-card { background: transparent; border: 1px solid var(--accent); padding: 40px; transition: 0.3s; }
+        .benefit-card:hover { background: var(--accent); color: #000; }
+        
+        .btn-gold { display: inline-block; border: 2px solid var(--accent); color: var(--accent); padding: 20px 40px; text-decoration: none; font-weight: 700; text-transform: uppercase; }
+        .btn-gold:hover { background: var(--accent); color: #000; }
+        
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 0 10%; }
+        .grid img { width: 100%; opacity: 0.8; transition: 0.3s; }
+        .grid img:hover { opacity: 1; }
+        
+        footer { padding: 100px 10%; text-align: center; }
+        .contact-link { font-size: 3rem; color: var(--text); text-decoration: none; font-weight: 900; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="SmartReach" style="height: 80px; width: auto; display: block;">
+        </div>
+        <a href="index.html" class="back-btn">← Wstecz</a>
+    </header>
+
+    <section class="hero">
+        <h1>Kadry, które <span class="highlight">napędzają</span> team.</h1>
+        <p>W motorsporcie liczy się ułamek sekundy. Dostarczam agresywny, profesjonalny content wizualny, który idealnie eksponuje sponsorów i buduje mistrzowski wizerunek Twojego teamu.</p>
+        <br><br>
+        <a href="#contact" class="btn-gold">Wjedź na wyższy poziom</a>
+    </section>
+
+    <section class="benefits">
+        <div class="benefit-card"><h3>Ekspozycja Sponsorów</h3><p>Budżet domyka się na laminacie. Gwarantuję dynamiczne ujęcia, na których logotypy Twoich partnerów są idealnie widoczne.</p></div>
+        <div class="benefit-card"><h3>Wizerunek Teamu Premium</h3><p>Tworzę unikalny reportaż z parku serwisowego, który pozycjonuje Twój zespół jako profesjonalny projekt biznesowy.</p></div>
+        <div class="benefit-card"><h3>Content live z toru</h3><p>Dostarczam obrobione paczki ujęć w trakcie trwania weekendu wyścigowego, aby fani śledzili Waszą walkę.</p></div>
+    </section>
+
+    <section class="portfolio">
+        <div class="grid">
+            <img src="moto (1).jpg" alt="P1">
+            <img src="moto (2).jpg" alt="P2">
+            <img src="moto (3).jpg" alt="P3">
+            <img src="moto (4).jpg" alt="P4">
+            <img src="moto (5).jpg" alt="P5">
+            <img src="moto (6).jpg" alt="P6">
+        </div>
+    </section>
+
+    <footer id="contact">
+        <a href="mailto:kontakt@smartreach.pl" class="contact-link">kontakt@smartreach.pl</a>
+    </footer>
+</body>
+</html>
