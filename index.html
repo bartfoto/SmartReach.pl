@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartReach | Bartosz Tyszko - Marketing Wizualny</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --black: #080808;
+            --white: #ffffff;
+            --dark-grey: #121212;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--black);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            padding: 40px 20px;
+        }
+
+        /* --- ANIMACJE --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- KONTENER GŁÓWNY --- */
+        .welcome-container {
+            text-align: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Sekcja o mnie z animacją */
+        .about-me {
+            animation: fadeInUp 1.2s ease forwards;
+            margin-bottom: 60px;
+        }
+
+        .about-me h1 {
+            font-weight: 900;
+            font-size: 3.5rem;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: var(--gold);
+        }
+
+        .about-me p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #ccc;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* --- WYBÓR KATEGORII --- */
+        .choices-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            /* Opóźnienie animacji przycisków, aby najpierw pojawił się tekst */
+            opacity: 0;
+            animation: fadeInUp 1.2s ease 0.5s forwards; 
+        }
+
+        .choice-card {
+            background: var(--dark-grey);
+            border: 1px solid #222;
+            padding: 50px 30px;
+            text-decoration: none;
+            color: var(--white);
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 1.8rem;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+
+        /* Efekt hover dla kart */
+        .choice-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .choice-card span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            color: #888;
+            margin-top: 10px;
+            text-transform: none;
+            transition: 0.3s;
+        }
+
+        .choice-card:hover span {
+            color: var(--white);
+        }
+
+        /* Subtelny pasek na dole karty przy najechaniu */
+        .choice-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .choice-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* --- RESPONSYWNOŚĆ --- */
+        @media (max-width: 768px) {
+            .about-me h1 { font-size: 2.3rem; letter-spacing: -1px; }
+            .about-me p { font-size: 1rem; }
+            .choices-grid { grid-template-columns: 1fr; gap: 20px; }
+            .choice-card { min-height: 150px; padding: 40px 20px; font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-container">
+        
+        <!-- Sekcja O Mnie -->
+        <section class="about-me">
+            <h1>Bartosz Tyszko <br><span class="highlight">SmartReach</span></h1>
+            <p>Tworzę dynamiczny i profesjonalny content wizualny, który buduje silne marki biznesowe. Łączę pasję do szybkich maszyn i sportowej rywalizacji z fotografią, która realnie zarabia na Twój sukces.</p>
+        </section>
+
+        <!-- Wybór ścieżki -->
+        <div class="choices-grid">
+            <a href="sport.html" class="choice-card">
+                SPORT
+                <span>Marketing wizualny dla klubów</span>
+            </a>
+            <a href="moto.html" class="choice-card">
+                MOTORYZACJA
+                <span>Fotografia reklamowa i komercyjna</span>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
